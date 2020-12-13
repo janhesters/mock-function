@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/janhesters/mock-function/compare/v1.4.0...v2.0.0) (2020-12-13)
+
+
+### Features
+
+* fixes exports ([0bb3875](https://github.com/janhesters/mock-function/commit/0bb387511ed5f09a3bc094d250235afaa4069b83)), closes [#1](https://github.com/janhesters/mock-function/issues/1)
+
+
+### BREAKING CHANGES
+
+* Makes the package actually work.
+
 # [1.4.0](https://github.com/janhesters/mock-function/compare/v1.3.0...v1.4.0) (2020-12-13)
 
 
