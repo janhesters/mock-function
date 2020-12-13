@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/janhesters/mock-function/compare/v1.2.0...v1.3.0) (2020-12-13)
+
+
+### Features
+
+* try to publish again ([cc50da5](https://github.com/janhesters/mock-function/commit/cc50da55b37892ce1e72fa5a26347c64c255afb4)), closes [#5](https://github.com/janhesters/mock-function/issues/5)
+
 # [1.2.0](https://github.com/janhesters/mock-function/compare/v1.1.0...v1.2.0) (2020-12-13)
 
 
