@@ -1,0 +1,50 @@
+name: Pull Request
+on: [pull_request]
+
+jobs:
+  testing:
+    strategy:
+      fail-fast: false
+      matrix:
+        command:
+          - lint
+          - test
+          - type-check
+    name: ${{ matrix.command }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+      - name: 'Cache Yarn'
+        uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: 'Install dependencies'
+        run: yarn install --frozen-lockfile
+      - name: 'Run ${{ matrix.command }}'
+        run: yarn ${{ matrix.command }}
+  commitlint:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    if: github.actor != 'dependabot-preview[bot]'
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v1
+  auto-approve:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    if:
+      github.actor == 'dependabot[bot]' || github.actor ==
+      'dependabot-preview[bot]'
+    steps:
+      - uses: hmarr/auto-approve-action@v2.0.0
+        with:
+          github-token: '${{ secrets.GITHUB_TOKEN }}'
