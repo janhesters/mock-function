@@ -63,7 +63,7 @@
       "@semantic-release/github"
     ]
   },
-  "repository": "https://github.com/janhesters/fn",
+  "repository": "https://github.com/janhesters/mock-function",
   "scripts": {
     "build": "tsc",
     "format": "prettier --write .",
