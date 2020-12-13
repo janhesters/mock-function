@@ -6,7 +6,7 @@
 *.pem
 
 # production
-/build
+/dist
 
 # linting
 .eslintcache

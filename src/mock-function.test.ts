@@ -3,7 +3,16 @@ import { describe } from 'riteway';
 import mockFunction from './mock-function';
 
 describe('fn - the mock function', async assert => {
-  const mockedFunction = mockFunction((a: number, b: number) => a + b);
+  // eslint-disable-next-line unicorn/consistent-function-scoping
+  const functionToMock = (a: number, b: number) => a + b;
+  const mockedFunction = mockFunction(functionToMock);
+
+  assert({
+    given: 'the mocked function was NOT called yet',
+    should: 'have an empty calls array',
+    actual: mockedFunction.calls,
+    expected: [],
+  });
 
   assert({
     given: 'calling a mocked function',
@@ -17,6 +26,31 @@ describe('fn - the mock function', async assert => {
     should: 'return the correct args',
     actual: mockedFunction.calls,
     expected: [[21, 21]],
+  });
+
+  {
+    const anotherMockedFunction = mockFunction(functionToMock);
+    anotherMockedFunction(2000, 12);
+
+    assert({
+      given: 'mocking another function',
+      should:
+        'create a unique new mock and NOT interfere with the existing mock',
+      actual: mockedFunction.calls,
+      expected: [[21, 21]],
+    });
+  }
+
+  mockedFunction(9000, 1);
+
+  assert({
+    given: 'calling the mocked function again',
+    should: 'add the arguments to the calls array',
+    actual: mockedFunction.calls,
+    expected: [
+      [21, 21],
+      [9000, 1],
+    ],
   });
 });
 
