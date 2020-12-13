@@ -1,5 +1,8 @@
 {
-  "author": "Jan Hesters",
+  "author": {
+    "name": "Jan Hesters",
+    "url": "https://janhesters.com"
+  },
   "dependencies": {
     "@types/ramda": "0.27.33",
     "ramda": "0.27.1"
