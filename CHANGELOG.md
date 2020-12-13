@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/janhesters/mock-function/compare/v1.3.0...v1.4.0) (2020-12-13)
+
+
+### Features
+
+* publish again hopefully ([fa7a9c6](https://github.com/janhesters/mock-function/commit/fa7a9c679f795d78b61c0925d2e432c596f82984)), closes [#5](https://github.com/janhesters/mock-function/issues/5)
+
 # [1.3.0](https://github.com/janhesters/mock-function/compare/v1.2.0...v1.3.0) (2020-12-13)
 
 
