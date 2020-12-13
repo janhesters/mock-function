@@ -16,7 +16,7 @@ npm i --save-dev mock-function
 yarn add --dev mock-function
 ```
 
-Then import it in your tests.
+Import it in your tests.
 
 ```ts
 import fn from 'mock-function';
