@@ -33,7 +33,7 @@ const mockedAdd = mockFunction(add);
 mockedAdd.hasBeenCalled();
 // ↵ false
 
-mockedAdd(42, 42);
+mockedAdd(21, 21);
 // ↵ 42
 mockedAdd(9000, 1);
 // ↵ 9001 (😱 OVER 9000)
@@ -43,11 +43,11 @@ mockedAdd.hasBeenCalled();
 
 mockedAdd.hasBeenCalledWith(2000, 12);
 // ↵ false
-mockedAdd.hasBeenCalledWith(42, 42);
+mockedAdd.hasBeenCalledWith(21, 21);
 // ↵ true
 
 mockedAdd.calls;
-// ↵ [[42, 42], [9000, 1]]
+// ↵ [[21, 21], [9000, 1]]
 ```
 
 ## Caveats
