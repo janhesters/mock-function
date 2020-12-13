@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/janhesters/mock-function/compare/v1.1.0...v1.2.0) (2020-12-13)
+
+
+### Features
+
+* rename package ([41bddd6](https://github.com/janhesters/mock-function/commit/41bddd678617b2fb80ca9fe7b807ea45f479bc5f)), closes [#5](https://github.com/janhesters/mock-function/issues/5)
+
 # [1.1.0](https://github.com/janhesters/mock-function/compare/v1.0.0...v1.1.0) (2020-12-13)
 
 
