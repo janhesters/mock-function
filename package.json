@@ -46,6 +46,9 @@
   "main": "dist/index.js",
   "name": "fn",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "release": {
     "branches": [
       "main"
