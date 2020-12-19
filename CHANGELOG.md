@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/janhesters/mock-function/compare/v2.0.0...v2.1.0) (2020-12-19)
+
+
+### Features
+
+* add hasBeenCalledTimes ([6d24139](https://github.com/janhesters/mock-function/commit/6d2413938bce3659810634790d57ea194e78a126)), closes [#19](https://github.com/janhesters/mock-function/issues/19)
+
 # [2.0.0](https://github.com/janhesters/mock-function/compare/v1.4.0...v2.0.0) (2020-12-13)
 
 ### Features
