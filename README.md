@@ -33,6 +33,14 @@ const mockedAdd = mockFunction(add);
 mockedAdd.hasBeenCalled();
 // ↵ false
 
+mockedAdd.hasBeenCalledWith(21, 21);
+// ↵ false
+
+mockedAdd.hasBeenCalledTimes;
+// ↵ 0
+mockedAdd.calls;
+// ↵ []
+
 mockedAdd(21, 21);
 // ↵ 42
 mockedAdd(9000, 1);
@@ -46,6 +54,8 @@ mockedAdd.hasBeenCalledWith(2000, 12);
 mockedAdd.hasBeenCalledWith(21, 21);
 // ↵ true
 
+mockedAdd.hasBeenCalledTimes;
+// ↵ 2
 mockedAdd.calls;
 // ↵ [[21, 21], [9000, 1]]
 ```
