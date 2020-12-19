@@ -163,3 +163,42 @@ describe('fn.hasBeenCalledWith()', async assert => {
     });
   }
 });
+
+describe('fn.hasBeenCalledTimes', async assert => {
+  {
+    const mockedFunction = mockFunction();
+
+    assert({
+      given: 'the mocked function has never been called',
+      should: 'return 0',
+      actual: mockedFunction.hasBeenCalledTimes,
+      expected: 0,
+    });
+  }
+
+  {
+    const mockedFunction = mockFunction();
+    mockedFunction();
+
+    assert({
+      given: 'the mocked function has been called once',
+      should: 'return 1',
+      actual: mockedFunction.hasBeenCalledTimes,
+      expected: 1,
+    });
+  }
+
+  {
+    const mockedFunction = mockFunction();
+    mockedFunction();
+    mockedFunction();
+    mockedFunction();
+
+    assert({
+      given: 'the mocked function has been called three times',
+      should: 'return 3',
+      actual: mockedFunction.hasBeenCalledTimes,
+      expected: 3,
+    });
+  }
+});
