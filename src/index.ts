@@ -1,3 +1,1 @@
-import mockFunction from './mock-function';
-
-export default mockFunction;
+export { default } from './mock-function';

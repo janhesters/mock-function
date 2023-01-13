@@ -11,9 +11,7 @@
     "plugin:import/warnings",
     "plugin:prettier/recommended",
     "plugin:unicorn/recommended",
-    "prettier",
-    "prettier/unicorn",
-    "prettier/@typescript-eslint"
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
