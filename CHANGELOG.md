@@ -1,3 +1,15 @@
+# [2.2.0](https://github.com/janhesters/mock-function/compare/v2.1.0...v2.2.0) (2023-01-13)
+
+
+### Bug Fixes
+
+* release workflow ([5d9f19d](https://github.com/janhesters/mock-function/commit/5d9f19d102dcf6f044cc3e0a1044ee5df00427c1)), closes [#150](https://github.com/janhesters/mock-function/issues/150)
+
+
+### Features
+
+* upgrade packages ([c464349](https://github.com/janhesters/mock-function/commit/c4643494244759c21ba1a8ceab05710179497590)), closes [#148](https://github.com/janhesters/mock-function/issues/148)
+
 # [2.1.0](https://github.com/janhesters/mock-function/compare/v2.0.0...v2.1.0) (2020-12-19)
 
 
